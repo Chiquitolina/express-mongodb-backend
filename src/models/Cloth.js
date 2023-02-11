@@ -5,6 +5,10 @@ const clothSchema = new Schema({
         type: String,
         required: true,
     },
+    imagen: {
+        type: String,
+        required: false,
+    },
     marca: {
         type: String,
         required: true,
@@ -28,9 +32,13 @@ const clothSchema = new Schema({
     precio: {
         type: Number,
         required: true,
+    },
+    vendida: {
+        type: Boolean
     }},
 {
-    timestamps: true
+    timestamps: true,
+    versionKey: false,
 })
 
 export default model('Cloth', clothSchema)
